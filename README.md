@@ -1,4 +1,24 @@
-# OpenTrans
+
+<h1 align="center">
+OpenTrans
+</h1>
+
+<p align="center">
+    <a href="https://rainstorm108.github.io/OpenTrans/"><img alt="Documentation" src="https://img.shields.io/website?url=https%3A%2F%2Frainstorm108.github.io%2FOpenTrans%2F&label=doc"></a>
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/opentrans">
+    <a href="https://github.com/RainStorm108/OpenTrans/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/rainstorm108/opentrans"></a>
+    <img alt="PyPI - Status" src="https://img.shields.io/pypi/status/opentrans">
+    <a href="https://github.com/RainStorm108/OpenTrans"><img alt="PyPI version" src="https://img.shields.io/pypi/v/opentrans"></a>
+</p>
+
+---
+**Documentation:** [https://rainstorm108.github.io/OpenTrans/](https://rainstorm108.github.io/OpenTrans/)
+
+**PyPI:** [https://pypi.org/project/opentrans/](https://pypi.org/project/opentrans/)
+
+**Source Code:** [https://github.com/RainStorm108/OpenTrans](https://github.com/RainStorm108/OpenTrans)
+
+---
 
 **OpenTrans** is a privacy-first, local-LLM batch translation utility powered by Ollama. It mirrors a source directory into a target language while preserving the exact file hierarchy, making it ideal for documenting software, translating blogs, or localizing static sites.
 
