@@ -145,6 +145,7 @@ graph TD
 * [x] Implement hash caching to skip unchanged files
 * [ ] Finish the Docusaurus translate script
 * [ ] User Tree-sitter to replace the code blocks before translation instead of regex
+* [ ] Add support for more file types
 * [ ] ...
 
 ## License
