@@ -359,28 +359,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running Examples
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -389,14 +367,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+  <a href="#basic-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setup
+        Basic Command
       
     </span>
   </a>
@@ -404,10 +393,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-developers" class="md-nav__link">
+  <a href="#configuration-configyaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For Developers
+        Configuration (config.yaml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Examples
       
     </span>
   </a>
@@ -420,10 +420,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#folder-structure" class="md-nav__link">
+  <a href="#local-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Folder Structure
+        Local Development
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
       
     </span>
   </a>
@@ -509,28 +520,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running Examples
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -539,14 +528,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+  <a href="#basic-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setup
+        Basic Command
       
     </span>
   </a>
@@ -554,10 +554,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-developers" class="md-nav__link">
+  <a href="#configuration-configyaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For Developers
+        Configuration (config.yaml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Examples
       
     </span>
   </a>
@@ -570,10 +581,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#folder-structure" class="md-nav__link">
+  <a href="#local-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Folder Structure
+        Local Development
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
       
     </span>
   </a>
@@ -634,7 +656,7 @@
 
 
 <h1 id="opentrans">OpenTrans</h1>
-<p><strong>OpenTrans</strong> is a privacy-first, local-LLM batch translation utility using Ollama. It is designed to mirror a source directory into a target language while preserving the exact file hierarchy.</p>
+<p><strong>OpenTrans</strong> is a privacy-first, local-LLM batch translation utility powered by Ollama. It mirrors a source directory into a target language while preserving the exact file hierarchy, making it ideal for documenting software, translating blogs, or localizing static sites.</p>
 <h2 id="key-features">Key Features</h2>
 <ul>
 <li><strong>Local-First (Ollama):</strong> Private, cost-free translation using models like Gemma, Llama 3, or DeepSeek.</li>
@@ -644,106 +666,103 @@
 <li><strong>Smart Caching:</strong> Uses hashing to track file changes. Only files that have been modified since the last run are sent to the LLM, saving significant time and compute resources.</li>
 <li><strong>Resilient File Handling:</strong> Automatically pulls required models from Ollama with a real-time progress bar if they are missing.</li>
 </ul>
-<h2 id="quick-usage">Quick Usage</h2>
-<p>Simply provide the input directory and the target output directory.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>opentrans<span class="w"> </span>./docs<span class="w"> </span>./translated_docs<span class="w"> </span>--config<span class="w"> </span>./config.yaml
+<h2 id="installation">Installation</h2>
+<p><strong>Prerequisites</strong>: You must have <a href="https://ollama.com/download">Ollama</a> installed and running.</p>
+<p><strong>Option 1: Install via PyPI (Recommended)</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">opentrans</span>
+</span></code></pre></div>
+<p><strong>Option 2: Install via uv</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">uv</span> <span class="n">tool</span> <span class="n">install</span> <span class="n">opentrans</span>
+</span></code></pre></div>
+<p><strong>Option 3: From Source</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git clone https://github.com/rainstorm108/OpenTrans.git
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>cd OpenTrans
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>uv tool install .
+</span></code></pre></div>
+<h2 id="usage">Usage</h2>
+<h3 id="basic-command">Basic Command</h3>
+<p>The simplest way to run OpenTrans is by specifying the input and output directories:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>opentrans<span class="w"> </span>./docs<span class="w"> </span>./translated_docs<span class="w"> </span>--config<span class="w"> </span>./config.yaml
 </span></code></pre></div>
 <p><strong>Example Output:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Target Language: Chinese
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Input:  /home/user/Projects/OpenTrans/docs
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Output: /home/user/Projects/OpenTrans/translated_docs
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Using Model: translategemma:4b
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Translating Files: 100%|████████████████████████████████| 12/12 [00:45&lt;00:00, 3.7s/file]
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Complete.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Target Language: Chinese
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Input:  /home/user/Projects/OpenTrans/docs
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Output: /home/user/Projects/OpenTrans/translated_docs
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Using Model: translategemma:4b
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Translating Files: 100%|████████████████████████████████| 12/12 [00:45&lt;00:00, 3.7s/file]
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>Complete.
 </span></code></pre></div>
-<h2 id="running-examples">Running Examples</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Translating Docusaurus</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>opentrans<span class="w"> </span>./Example/Docusaurus/docs<span class="w"> </span>./Example/Docusaurus/i18n/zh-hans/docusaurus-plugin-content-blog/current<span class="w"> </span>./config.yaml<span class="w">    </span>
+<h3 id="configuration-configyaml">Configuration (config.yaml)</h3>
+<p>OpenTrans relies on a YAML configuration file to define the model and target language. See <a href="config.yaml">example</a>.</p>
+<h3 id="running-examples">Running Examples</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>opentrans<span class="w"> </span>./Example/Docusaurus/docs<span class="w"> </span>./Example/Docusaurus/i18n/zh-hans/docusaurus-plugin-content-blog/current<span class="w"> </span>./config.yaml<span class="w">    </span>
 </span></code></pre></div>
-<h2 id="installation">Installation</h2>
-<h3 id="setup">Setup</h3>
-<p>OpenTrans requires Ollama to be installed and running on your local machine.</p>
+<h2 id="local-development">Local Development</h2>
 <ol>
 <li>
-<p>Install Ollama: Follow instructions at <a href="https://ollama.com/download">Ollama</a></p>
+<p>Clone the repository
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span><span class="o">[</span>https://github.com/rainstorm108/OpenTrans.git<span class="o">](</span>https://github.com/rainstorm108/OpenTrans.git<span class="o">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>OpenTrans
+</span></code></pre></div></p>
 </li>
 <li>
-<p>Install <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a></p>
+<p>Set up the environment (using uv)</p>
 </li>
 </ol>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>uv<span class="w"> </span>sync
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 </span></code></pre></div>
 <ol>
-<li>Install OpenTrans</li>
+<li>Install in editable mode</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rainstorm108/OpenTrans.git
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>OpenTrans
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </span></code></pre></div>
 <ol>
-<li>run</li>
+<li>Run tests
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hatch<span class="w"> </span><span class="nb">test</span>
+</span></code></pre></div></li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>opentrans<span class="w"> </span>./docs<span class="w"> </span>./translated_docs<span class="w"> </span>--config<span class="w"> </span>./config.yaml
-</span></code></pre></div>
-<h3 id="for-developers">For Developers</h3>
-<ol>
-<li>Environment Setup</li>
-</ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>uv<span class="w"> </span>sync
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activte
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>hatch<span class="w"> </span>shell
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</span></code></pre></div>
-<ol>
-<li>Running Tests</li>
-</ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hatch<span class="w"> </span><span class="nb">test</span>
-</span></code></pre></div>
-<h2 id="folder-structure">Folder Structure</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>OpenTrans/
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>├── src/
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>│   └── opentrans/
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│       ├── __init__.py        
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>│       ├── main.py            # CLI interface using Click
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>│       ├── settings.py        # Translate settings
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>│       ├── translator.py      # Translate logic
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>│       ├── cache_manager.py   # Manages translation caching using content hashing to skip unchanged files.
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>│       └── hasher.py          # Hash file for cache
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>├── tests/
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>│   ├── test_cache_manager.py
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>│   ├── test_hasher.py
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>│   └── test_translator.py
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>├── config.yaml                # Global settings (model, language, etc.)
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>├── pyproject.toml
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>└── README.md 
+<h2 id="project-structure">Project Structure</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>OpenTrans/
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>├── src/
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>│   └── opentrans/
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>│       ├── __init__.py        
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>│       ├── main.py            # CLI interface using Click
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>│       ├── settings.py        # Configuration management
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>│       ├── translator.py      # Core translation logic
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>│       ├── cache_manager.py   # Caching system
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>│       └── hasher.py          # File content hashing
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>├── tests/
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>├── config.yaml                
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>├── pyproject.toml
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>└── README.md
 </span></code></pre></div>
 <h2 id="workflow">Workflow</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>graph TD
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    %% Setup Phase
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    Start((Start)) --&gt; CheckRunning{Ollama Running?}
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    CheckRunning -- No --&gt; Err[Error: Start Ollama]
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    CheckRunning -- Yes --&gt; CheckModel{Model Exists?}
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    CheckModel -- No --&gt; Pull[Download Model with Progress Bar]
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    Pull --&gt; Init
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    CheckModel -- Yes --&gt; Init[Load Paths &amp; Config]
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    %% The Loop
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    Init --&gt; NextFile{Next File?}
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    NextFile -- No --&gt; Exit([Exit])
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    NextFile -- Yes --&gt; IsTranslatable{File Type Supported?}
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    %% Branching Logic
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    IsTranslatable -- No --&gt; Mirror[Copy Original File]
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    IsTranslatable -- Yes --&gt; Shield[Apply Syntax Placeholders]
-</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
-</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    Shield --&gt; Trans[Translate via Ollama API]
-</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    Trans --&gt; Restore[Restore Protected Code/Math]
-</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    Restore --&gt; Save[Create Dir &amp; Save File]
-</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>    Save --&gt; NextFile
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>graph TD
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    %% Setup Phase
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    Start((Start)) --&gt; CheckRunning{Ollama Running?}
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    CheckRunning -- No --&gt; Err[Error: Start Ollama]
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    CheckRunning -- Yes --&gt; CheckModel{Model Exists?}
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    CheckModel -- No --&gt; Pull[Download Model with Progress Bar]
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    Pull --&gt; Init
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    CheckModel -- Yes --&gt; Init[Load Paths &amp; Config]
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    %% The Loop
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    Init --&gt; NextFile{Next File?}
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    NextFile -- No --&gt; Exit([Exit])
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    NextFile -- Yes --&gt; IsTranslatable{File Type Supported?}
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    %% Branching Logic
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>    IsTranslatable -- No --&gt; Mirror[Copy Original File]
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    IsTranslatable -- Yes --&gt; Shield[Apply Syntax Placeholders]
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    Shield --&gt; Trans[Translate via Ollama API]
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    Trans --&gt; Restore[Restore Protected Code/Math]
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>    Restore --&gt; Save[Create Dir &amp; Save File]
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>    Save --&gt; NextFile
 </span></code></pre></div>
 <h2 id="todo">Todo</h2>
 <ul>
