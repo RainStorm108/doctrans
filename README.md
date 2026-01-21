@@ -1,0 +1,152 @@
+# DocTrans
+
+**DocTrans** is a privacy-first, local-LLM batch translation utility using Ollama. It is designed to mirror a source directory into a target language while preserving the exact file hierarchy.
+
+## Key Features
+
+* **Local-First (Ollama):** Private, cost-free translation using models like Gemma, Llama 3, or DeepSeek.
+* **Syntax Shielding:** Automatically protects code blocks (```), inline code (`), LaTeX math ($), and Markdown links from being corrupted by the LLM.
+* **Directory Mirroring:** Recursively replicates your source folder structure in the output destination.
+* **Parallel Processing:** Uses `ThreadPoolExecutor` for high-speed batch handling of large file sets.
+* **Smart Caching:** Uses hashing to track file changes. Only files that have been modified since the last run are sent to the LLM, saving significant time and compute resources.
+* **Resilient File Handling:** Automatically pulls required models from Ollama with a real-time progress bar if they are missing.
+
+## Quick Usage
+
+Simply provide the input directory and the target output directory.
+
+```bash
+doctrans ./docs ./translated_docs --config ./config.yaml
+
+```
+
+**Example Output:**
+
+```text
+Target Language: Chinese
+Input:  /home/user/Projects/DocTrans/docs
+Output: /home/user/Projects/DocTrans/translated_docs
+Using Model: translategemma:4b
+
+Translating Files: 100%|████████████████████████████████| 12/12 [00:45<00:00, 3.7s/file]
+
+Complete.
+```
+
+## Running Examples
+
+```bash
+# Translating Docusaurus
+doctrans ./Example/Docusaurus/docs ./Example/Docusaurus/i18n/zh-hans/docusaurus-plugin-content-blog/current ./config.yaml    
+```
+
+## Installation
+
+### Setup 
+
+DocTrans requires Ollama to be installed and running on your local machine.
+
+1. Install Ollama: Follow instructions at [Ollama](https://ollama.com/download)
+
+2. Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+```shell
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv tool install .
+```
+
+3. Install DocTrans
+
+```bash
+git clone https://github.com/rainstorm108/DocTrans.git
+cd DocTrans
+uv pip install .
+```
+
+4. run
+
+```bash
+doctrans ./docs ./translated_docs --config ./config.yaml
+```
+
+### For Developers
+
+1. Environment Setup
+
+```bash
+uv sync
+source .venv/bin/activte
+hatch shell
+uv pip install -e .
+```
+
+2. Running Tests
+
+```bash
+hatch test
+```
+
+## Folder Structure
+
+```text
+DocTrans/
+├── src/
+│   └── doctrans/
+│       ├── __init__.py        
+│       ├── main.py            # CLI interface using Click
+│       ├── settings.py        # Pydantic V2 settings management
+│       ├── translator.py      # Ollama API client & Placeholder logic
+│       └── ...
+├── tests/                     # Comprehensive Pytest suite
+│   ├── conftest.py
+│   └── test_translator.py
+├── config.yaml                # Global settings (model, language, etc.)
+├── pyproject.toml
+└── README.md 
+
+```
+
+## Workflow
+
+The tool follows a "Scan-Protect-Translate-Restore" pipeline:
+
+```mermaid
+graph TD
+    %% Setup Phase
+    Start((Start)) --> CheckRunning{Ollama Running?}
+    CheckRunning -- No --> Err[Error: Start Ollama]
+    CheckRunning -- Yes --> CheckModel{Model Exists?}
+    
+    CheckModel -- No --> Pull[Download Model with Progress Bar]
+    Pull --> Init
+    CheckModel -- Yes --> Init[Load Paths & Config]
+
+    %% The Loop
+    Init --> NextFile{Next File?}
+    NextFile -- No --> Exit([Exit])
+    NextFile -- Yes --> IsTranslatable{File Type Supported?}
+
+    %% Branching Logic
+    IsTranslatable -- No --> Mirror[Copy Original File]
+    IsTranslatable -- Yes --> Shield[Apply Syntax Placeholders]
+    
+    Shield --> Trans[Translate via Ollama API]
+    Trans --> Restore[Restore Protected Code/Math]
+    Restore --> Save[Create Dir & Save File]
+    Save --> NextFile
+
+```
+
+## Todo
+
+* [x] Click-based CLI interface
+* [x] Placeholder-based syntax protection (Code/LaTeX)
+* [x] Multi-threaded parallel processing
+* [x] Implement hash caching to skip unchanged files
+* [ ] Finish the Docusaurus translate script
+* [ ] User Tree-sitter to replace the code blocks before translation instead of regex
+* [ ] ...
+
+## License
+
+This project is licensed under the MIT License.
