@@ -1,6 +1,6 @@
 import pytest
 from pathlib import Path
-from doctrans import get_file_hash
+from opentrans import get_file_hash
 
 def test_file_not_found(tmp_path):
   with pytest.raises(FileNotFoundError) as excinfo:

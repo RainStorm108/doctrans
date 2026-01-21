@@ -40,7 +40,7 @@ from .translator import Translator
 
 def main(input_dir, output_dir, config, model, lang):
     """
-    DocTrans: Batch translate documentation using local Ollama LLMs..
+    OpenTrans: Batch translate documentation using local Ollama LLMs.
 
     A specialized tool for translating Markdown and LaTeX files while preserving 
     input directory structures and protecting technical syntax (code, math, and links).

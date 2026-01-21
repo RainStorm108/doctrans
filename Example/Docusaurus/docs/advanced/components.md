@@ -19,7 +19,7 @@ Check the [Advanced Setup](./setup.mdx) for more details.
 2. Run your tool:
 
 ```bash
-doctrans ./Example/Docusaurus/docs ./Example/Docusaurus/i18n/zh-Hans/docusaurus-plugin-content-docs/current
+OpenTrans ./Example/Docusaurus/docs ./Example/Docusaurus/i18n/zh-Hans/docusaurus-plugin-content-docs/current
 ```
 
 3.Verify that:

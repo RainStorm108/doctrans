@@ -1,5 +1,5 @@
 import pytest
-from doctrans.cache_manager import CacheManager
+from opentrans.cache_manager import CacheManager
 
 @pytest.fixture
 def tmp_cache(tmp_file):

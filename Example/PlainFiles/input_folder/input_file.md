@@ -4,7 +4,7 @@ category: Testing
 ---
 
 # Project Overview
-Welcome to the **DocTrans** test file. This document is designed to verify that the LLM maintains formatting while translating text.
+Welcome to the **OpenTrans** test file. This document is designed to verify that the LLM maintains formatting while translating text.
 
 ## Features to Verify
 * **Formatting**: This is *italic*, and this is **bold**.

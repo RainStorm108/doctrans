@@ -1,9 +1,9 @@
-site_name: DocTrans
+site_name: OpenTrans
 site_description: A directory-preserving AI translator using Ollama.
-site_url: https://rainstorm108.github.io/doctrans/
+site_url: https://rainstorm108.github.io/opentrans/
 
-repo_name: RainStorm108/doctrans
-repo_url: https://github.com/RainStorm108/doctrans
+repo_name: RainStorm108/opentrans
+repo_url: https://github.com/RainStorm108/opentrans
 edit_uri: edit/main/docs/
 
 theme:

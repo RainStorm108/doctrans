@@ -1,8 +1,8 @@
 import pytest
 import logging
 from pathlib import Path
-from doctrans.translator import Translator
-from doctrans.settings import Settings
+from opentrans.translator import Translator
+from opentrans.settings import Settings
 
 logger = logging.getLogger(__name__)
 

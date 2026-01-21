@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "doctrans"
+name = "opentrans"
 dynamic = ["version"]
 authors = [
   { name="Hydrangea" },
@@ -34,15 +34,15 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/RainStorm108/doctrans"
-Documentation = "https://rainstorm108.github.io/doctrans/"
-Issues = "https://github.com/RainStorm108/doctrans/issues"
+Homepage = "https://github.com/RainStorm108/opentrans"
+Documentation = "https://rainstorm108.github.io/opentrans/"
+Issues = "https://github.com/RainStorm108/opentrans/issues"
 
 [project.scripts]
-doctrans = "doctrans.main:main"
+opentrans = "opentrans.main:main"
 
 [tool.hatch.version]
-path = "src/doctrans/__init__.py"
+path = "src/opentrans/__init__.py"
 
 [tool.hatch.build.targets.sdist]
 exclude = [
@@ -52,7 +52,7 @@ exclude = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/doctrans"]
+packages = ["src/opentrans"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

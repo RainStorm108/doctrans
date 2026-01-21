@@ -1,6 +1,6 @@
-# DocTrans
+# OpenTrans
 
-**DocTrans** is a privacy-first, local-LLM batch translation utility using Ollama. It is designed to mirror a source directory into a target language while preserving the exact file hierarchy.
+**OpenTrans** is a privacy-first, local-LLM batch translation utility using Ollama. It is designed to mirror a source directory into a target language while preserving the exact file hierarchy.
 
 ## Key Features
 
@@ -16,7 +16,7 @@
 Simply provide the input directory and the target output directory.
 
 ```bash
-doctrans ./docs ./translated_docs --config ./config.yaml
+opentrans ./docs ./translated_docs --config ./config.yaml
 
 ```
 
@@ -24,8 +24,8 @@ doctrans ./docs ./translated_docs --config ./config.yaml
 
 ```text
 Target Language: Chinese
-Input:  /home/user/Projects/DocTrans/docs
-Output: /home/user/Projects/DocTrans/translated_docs
+Input:  /home/user/Projects/OpenTrans/docs
+Output: /home/user/Projects/OpenTrans/translated_docs
 Using Model: translategemma:4b
 
 Translating Files: 100%|████████████████████████████████| 12/12 [00:45<00:00, 3.7s/file]
@@ -37,14 +37,14 @@ Complete.
 
 ```bash
 # Translating Docusaurus
-doctrans ./Example/Docusaurus/docs ./Example/Docusaurus/i18n/zh-hans/docusaurus-plugin-content-blog/current ./config.yaml    
+opentrans ./Example/Docusaurus/docs ./Example/Docusaurus/i18n/zh-hans/docusaurus-plugin-content-blog/current ./config.yaml    
 ```
 
 ## Installation
 
 ### Setup 
 
-DocTrans requires Ollama to be installed and running on your local machine.
+OpenTrans requires Ollama to be installed and running on your local machine.
 
 1. Install Ollama: Follow instructions at [Ollama](https://ollama.com/download)
 
@@ -55,18 +55,18 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv tool install .
 ```
 
-3. Install DocTrans
+3. Install OpenTrans
 
 ```bash
-git clone https://github.com/rainstorm108/DocTrans.git
-cd DocTrans
+git clone https://github.com/rainstorm108/OpenTrans.git
+cd OpenTrans
 uv pip install .
 ```
 
 4. run
 
 ```bash
-doctrans ./docs ./translated_docs --config ./config.yaml
+opentrans ./docs ./translated_docs --config ./config.yaml
 ```
 
 ### For Developers
@@ -89,9 +89,9 @@ hatch test
 ## Folder Structure
 
 ```text
-DocTrans/
+OpenTrans/
 ├── src/
-│   └── doctrans/
+│   └── opentrans/
 │       ├── __init__.py        
 │       ├── main.py            # CLI interface using Click
 │       ├── settings.py        # Translate settings

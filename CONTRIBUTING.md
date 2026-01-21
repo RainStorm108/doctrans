@@ -1,4 +1,4 @@
-# Contributing to DocTrans
+# Contributing to OpenTrans
 
 ## Getting Started
 
@@ -14,8 +14,8 @@ To contribute to this project, you will need to set up your development environm
 
 ```bash
 # Clone the repository
-git clone https://github.com/rainstorm108/DocTrans.git
-cd DocTrans
+git clone https://github.com/rainstorm108/OpenTrans.git
+cd OpenTrans
 
 # Sync dependencies and create a virtual environment
 uv sync
