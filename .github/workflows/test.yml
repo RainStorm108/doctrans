@@ -1,0 +1,26 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  run:
+    # Use a matrix for different OS and Python versions
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Hatch
+        run: pip install --upgrade hatch
+
+      - name: Run tests
+        run: hatch test

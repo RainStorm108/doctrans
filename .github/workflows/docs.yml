@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs-material mkdocs-include-markdown-plugin pymdown-extensions
+          pip install mkdocs-material mkdocs-include-markdown-plugin pymdown-extensions mkdocs-static-i18n
 
       - name: Build and Deploy
         run: mkdocs gh-deploy --force
